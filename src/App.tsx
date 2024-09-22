@@ -22,5 +22,5 @@ export const App: React.FC<Props> = (props) => {
 
 	/* Renderers */
 
-	return <div> App </div>;
+	return <div className="text-red-600"> App </div>;
 };
