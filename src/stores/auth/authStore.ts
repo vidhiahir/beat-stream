@@ -16,6 +16,7 @@ const userAuthStore = create<AuthState>((set) => ({
 			user,
 			isAuthenticated: true
 		}),
+
 	logout: () =>
 		set({
 			user: null,

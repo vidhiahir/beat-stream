@@ -2,9 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router';
 
 import { LoginPage } from './features/auth/components/LoginPage';
-import { HomePage } from './features/dashboard/components/HomePage';
-import { ProtectedRoutes } from './Routes/components/ProtectedRoutes';
-import userAuthStore from './stores/auth/authStore';
+import { HomePage } from './features/Home/components/HomePage';
 
 /* Types */
 interface Props {}
@@ -16,7 +14,7 @@ export const App: React.FC<Props> = (props) => {
 	/* Props Destructure */
 
 	/* State Variables */
-	const authenticatedUser = userAuthStore((state) => state.user);
+
 	/* Hooks, Queries & Mutations */
 
 	/* Constant, Refs and Memo Constant */
@@ -27,6 +25,7 @@ export const App: React.FC<Props> = (props) => {
 	/* Handlers */
 
 	/* Effects */
+	// remaining thing: to redirect to home page when already logged in person try to access login page
 
 	/* Renderers */
 
@@ -41,10 +40,10 @@ export const App: React.FC<Props> = (props) => {
 				<Route path="/signup" element />
 
 				{/* protected Routes */}
-				<Route element={<ProtectedRoutes />}>
-					<Route path="/home" element={<HomePage />} />
-					<Route path="/something" element />
-				</Route>
+				{/* <Route element={<ProtectedRoutes />}> */}
+				<Route path="/home" element={<HomePage />} />
+				<Route path="/something" element />
+				{/* </Route> */}
 
 				{/* fallback path-page not found 404 */}
 				<Route path="*" element />
