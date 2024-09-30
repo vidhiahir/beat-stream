@@ -5,7 +5,7 @@ interface Props {}
 
 /* Global Constants & Functions */
 
-export const ListOfPlaylist: React.FC<Props> = (props) => {
+export const HomeCommunityPlaylist: React.FC<Props> = (props) => {
 	/* Props Destructure */
 
 	/* State Variables */
@@ -22,5 +22,5 @@ export const ListOfPlaylist: React.FC<Props> = (props) => {
 
 	/* Renderers */
 
-	return <div> ListOfPlaylist </div>;
+	return <div> HomeCommunityPlaylist </div>;
 };

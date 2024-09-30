@@ -1,14 +1,14 @@
 import React from 'react';
 import { Header } from '../../Header/components/Header';
 import { Sidebar } from '../../Sidebar/components/Sidebar';
-import { HomeDashBoard } from './HomeDashBoard';
+import { ActivityDashBoard } from './ActivityDashboard';
 
 /* Types */
 interface Props {}
 
 /* Global Constants & Functions */
 
-export const HomePage: React.FC<Props> = (props) => {
+export const ActivityPage: React.FC<Props> = (props) => {
 	/* Props Destructure */
 
 	/* State Variables */
@@ -26,11 +26,11 @@ export const HomePage: React.FC<Props> = (props) => {
 	/* Renderers */
 
 	return (
-		<div className="flex flex-col ">
+		<div className="flex flex-col h-full w-full">
 			<Header />
-			<div className="flex flex-row flex-wrap mt-10 h-7/8 ">
+			<div className="flex flex-row flex-wrap mt-10 h-7/8">
 				<Sidebar />
-				<HomeDashBoard />
+				<ActivityDashBoard />
 			</div>
 		</div>
 	);

@@ -2,6 +2,7 @@ import ActivityIcon from '@mui/icons-material/History';
 import HomeIcon from '@mui/icons-material/Home'; /* Types */
 import React from 'react';
 import { ButtonList } from './ButtonList';
+import { Playlist } from './Playlist';
 import { ThemeToggle } from './ThemeToggle';
 interface Props {}
 
@@ -25,14 +26,14 @@ export const Sidebar: React.FC<Props> = (props) => {
 	/* Renderers */
 
 	return (
-		<div className="flex h-screen flex-col justify-between bg-light-contrast w-1/6 ">
+		<div className="flex h-screen flex-col justify-between bg-light-contrast w-1/6 fixed z-50">
 			<div className="flex flex-col items-center">
 				<ThemeToggle />
 				<ButtonList buttonIcon={<HomeIcon />}>Home</ButtonList>
-				<ButtonList buttonIcon={<ActivityIcon />}>My Activity</ButtonList>
+				<ButtonList buttonIcon={<ActivityIcon />}>Activity</ButtonList>
 			</div>
 			<div className="flex flex-col items-center">
-				<div>add playlist</div>
+				<Playlist />
 			</div>
 		</div>
 	);

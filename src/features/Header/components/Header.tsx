@@ -28,7 +28,7 @@ export const Header: React.FC<Props> = (props) => {
 	/* Renderers */
 
 	return (
-		<div className="flex flex-row justify-between  w-full h-20 bg-light-contrast rounded">
+		<div className="flex flex-row justify-between w-full h-1/8 bg-light-contrast fixed">
 			<div className="flex flex-row justify-start space-x-4 items-center ml-2">
 				<MenuIcon />
 				<div>Logo</div>

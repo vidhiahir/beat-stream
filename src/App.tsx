@@ -1,8 +1,9 @@
 import React from 'react';
-import { Route, Routes } from 'react-router';
 
-import { LoginPage } from './features/auth/components/LoginPage';
+import { Route, Routes } from 'react-router';
+import { ActivityPage } from './features/Activity/components/ActivityPage';
 import { HomePage } from './features/Home/components/HomePage';
+import { LoginPage } from './features/auth/components/LoginPage';
 
 /* Types */
 interface Props {}
@@ -30,9 +31,9 @@ export const App: React.FC<Props> = (props) => {
 	/* Renderers */
 
 	return (
-		<div>
+		<div className="h-screen w-screen bg-dashboard-color">
 			{/* <button onClick={() => setAuthType(AuthType.LOGIN)}>Login</button>
-			{role === UserRole.THEDON ? <button onClick={() => setAuthType(AuthType.SIGNUP)}>Register</button> : null} */}
+				{role === UserRole.THEDON ? <button onClick={() => setAuthType(AuthType.SIGNUP)}>Register</button> : null} */}
 
 			<Routes>
 				{/* unprotected Routes */}
@@ -42,7 +43,9 @@ export const App: React.FC<Props> = (props) => {
 				{/* protected Routes */}
 				{/* <Route element={<ProtectedRoutes />}> */}
 				<Route path="/home" element={<HomePage />} />
-				<Route path="/something" element />
+				<Route path="/activity" element={<ActivityPage />} />
+
+				{/* <Route path="/chat" element={<Chat/>} /> */}
 				{/* </Route> */}
 
 				{/* fallback path-page not found 404 */}
@@ -51,4 +54,5 @@ export const App: React.FC<Props> = (props) => {
 		</div>
 	);
 };
+
 export default App;

@@ -4,7 +4,8 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'light-contrast': '#d64fed'
+				'light-contrast': '#d64fed',
+				'dashboard-color': '#e9a6f4'
 			}
 		}
 	},
